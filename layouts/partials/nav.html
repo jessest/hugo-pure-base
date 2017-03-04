@@ -1,0 +1,40 @@
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+    <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
+      <ul>
+	{{ $currentNode := . }}
+	{{ range .Site.Menus.main }}
+        <li><a class="nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name}}</a></li>
+	{{end}}
+      </ul>
+    </div>	
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="titlebar show-for-small-only">
+	<div class="title-bar">
+	  <span class="title-bar-left">
+	    <a href="{{ .Site.BaseURL }}"><h4 class="site-logo"><b>{{ .Site.Title }}</b></h4></a>
+	  </span>
+	  <span class="title-bar-right">
+	    <button class="menu-icon" type="button" data-open="mobile-menu"></button>
+	    <span class="title-bar-title">MENU</span>
+	  </span>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+<nav class="top-bar nav-desktop" id="nav-menu">
+  <div class="top-bar-left">
+    <div class="menu-desktop">
+      <a href="{{ .Site.BaseURL }}"><h4 class="site-logo"><b>{{ .Site.Title }}</b></h4></a>
+    </div>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu menu-desktop">
+      {{ $currentNode := . }}	
+      {{ range .Site.Menus.main }}
+      <li><a class="nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}"><b>{{ .Name}}</b></a></li>{{end}}
+    </ul>
+  </div>
+</nav>
+

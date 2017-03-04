@@ -1,0 +1,26 @@
+/******************************************************************
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here is where you import
+all of your Sass files so they can compile into one
+CSS file.
+
+******************************************************************/
+
+// Import custom mixins
+@import "mixins";
+
+// Import your custom styles
+@import "main";
+
+// Import your retina/HD styles
+@import "2x";
+
+// Import your print styles
+@import "print";
+
+@import "theme";
+
+// Import your custom scss files
+@import "./../../static/scss/app";
