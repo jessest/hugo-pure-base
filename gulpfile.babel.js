@@ -55,6 +55,19 @@ gulp.task('site-js', () => gulp.src([
   .pipe(gulp.dest('./../../static/js')),
 );
 
+gulp.task('dev-js', () => gulp.src([
+  './static/js/*.js',
+])
+  .pipe(eslint({ configFile: './.eslintrc' }))
+  .pipe(eslint.format())
+  .pipe(babel({
+    presets: [['es2015', { modules: false }]],
+    compact: false,
+  }))
+  .pipe(plumber())
+  .pipe(concat('dev.js'))
+  .pipe(gulp.dest('./../../static/js')),
+);
 // JSHint, concat, and minify Foundation JavaScript
 gulp.task('foundation-js', () => gulp.src([
   // Foundation core - needed if you want to use any of the components below

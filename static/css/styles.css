@@ -12,215 +12,80 @@ Global Styles
     background-color: #222;
 }
 
-
-/*************
-  Nav mobile
-************** */
-
-.title-bar {
-    background-color: #222;
-    height: 60px;
-    padding-top: 15px;
-}
-
-#mobile-menu {
-    background-color: #222;
-    padding: 10px;
-}
-
-#mobile-menu li {
-    list-style: none;
-}
-
-#mobile-menu a {
-    color: rgba(255,255,255, 0.6);
-    font-weight: bold;
-    line-height: 2;
-}
-
-#mobile-menu a:hover {
-    color: rgba(255,255,255, 0.8);
-}
-
-/*************
-  Nav desktop
-************** */
-
-.nav-desktop {
-    background-color: #222;
-    padding: 0;
-}
-
-.site-logo {
-    color: white;
-    padding: 0.4rem 0 0 1rem;
-    margin: 0 0 0 0;
-}
-
-.nav-desktop .menu-desktop {
-    background-color: transparent;
-    line-height: 50px;
-}
-
-.menu-desktop {
-}
-
-.menu > li > a {
-    display: inline-block;
-    color: white;
-    line-height: 50px;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.menu > li > a:hover {
-    background-color: rgba(255,255,255, 0.1);
-}
-
 /*************
      Hero
 ************** */
+
 .hero-panel {
     background-color: #cccccc;
     padding: 50px 0px;
+    color: white;
     /*top right bottom left*/
     height: 300px;
-    background-image: url("../img/swirl_pattern.png");
+    background-image: url("../images/server.jpg");
 }
 
 
 /*************
      Main
 ************** */
+
 .main-content {
     padding: 80px 0px;
 }
 
-.content-one {
+.content-one {}
 
-}
+.content-two {}
 
-.content-two {
-
-}
 
 /*************
     Footer
 ************** */
+
 footer {
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  height: 150px;
     background-color: #222;
-    padding: 50px 0px;
+    padding: 10px 0px;
 }
 
 footer h4 {
-    color: rgba(255,255,255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1.3em;
+    text-align: center;
 }
 
 footer hr {
-    border-color: rgba(255,255,255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
     margin: 10px 0;
 }
 
 footer a {
     display: block;
-    color: rgba(255,255,255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 0.8em;
+    text-align: center;
 }
 
 footer a span {
     font-weight: bold;
-    color: rgba(255,255,255, 0.3);
-
+    color: rgba(255, 255, 255, 0.3);
 }
 
 footer a:hover {
-    color: rgba(255,255,255, 0.8);
+    color: rgba(255, 255, 255, 0.8);
 }
+
 
 /*************
   Media Query
 ************** */
 
-@media (max-width: 640px) {
-    .nav-desktop {
-	display: none;
-    }
-}
-
 @media (max-width: 800px) {
-    .hero h1,
-    .hero p {
-	width: 100%;
+    .hero h1, .hero p {
+        width: 100%;
     }
-}
-
-
-#about {
-text-align: center;
-color: #fafafa;
-font: normal small Arial, Helvetica;
-}
-
-#about a {
-color: #777;
-}
-
-#backup {
-  float: left;
-}
-[type="radio"] + label {
-  margin-left: 0.25rem;
-  margin-right: 0;
-}
-
-input[data-toggle]:checked + label,
-input[data-toggle]:checked + label:active {
-  font-weight: bold;
-}
-  input[data-toggle]:checked + label .price,
-  input[data-toggle]:checked + label:active .price {
-    visibility: hidden;
-  }
-
-
-.plan {
-  background-color: gray;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill;
-  max-width: 22em;
-  position: relative;
-  float: left;
-  margin: 10px 10px 10px 10px;
-}
-#topbar {
-  width: auto;
-}
-#custom-next {
-  position: relative;
-  float: left;
-}
-#custom-price {
-  position: relative;
-  float: left;
-  margin-left: 10px;
-}
-#payment-page {
-  display: none;
-}
-ul {
-  margin-left: 0;
-}
-.clear:before, .clear:after {
-  content:"";
-  display:table
-}
-
-.clear:after {
-  clear:both
-}
-
-.clear {
-  transform: scale(1);
 }

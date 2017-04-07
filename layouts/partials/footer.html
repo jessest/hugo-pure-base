@@ -1,13 +1,14 @@
 </body>
 <footer>
-  <div class="wrapper row small-up-1 medium-up-3">
-    <div class="column">
+  <div class="wrapper">
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
       <h4>Contact Info</h4>
       <hr>
       <a><span>Email </span>{{ .Site.Params.footer.email }}</a>
       <a><span>Proudly made in </span>{{ .Site.Params.footer.proudly }}</a>
     </div>
-    <div class="column">
+    <div class="pure-u-1 pure-u-md-1-3">
       <h4>Links</h4>
       <hr>
       {{ $currentNode := . }}
@@ -15,7 +16,7 @@
       <a class="nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name}}</a>
       {{end}}
     </div>
-    <div class="column">
+    <div class="pure-u-1 pure-u-md-1-3">
       <h4>Social</h4>
       <hr>
       {{ $currentNode := . }}
@@ -24,9 +25,8 @@
       {{end}}
     </div>
   </div>
+</div>
 </footer>
-<script src="{{ .Site.BaseURL }}js/jquery.js"></script>
-<script src="{{ .Site.BaseURL }}js/what-input.js"></script>
-<script src="{{ .Site.BaseURL }}js/foundation.js"></script>
+<script src="{{ .Site.BaseURL }}js/dev.js"></script>
 <script src="{{ .Site.BaseURL }}js/app.js"></script>
 </html>
